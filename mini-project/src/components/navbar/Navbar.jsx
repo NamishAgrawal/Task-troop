@@ -19,7 +19,6 @@ function Navbar() {
     };
   }, []);
 
-  // const currentUser = null
 
   const currentUser = {
     id: 1,
@@ -34,7 +33,6 @@ function Navbar() {
           <Link className="link" to="/">
             <span className="text">TaskTroop</span>
           </Link>
-       
         </div>
         <div className="links">
           <span>Explore</span>
@@ -42,10 +40,6 @@ function Navbar() {
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {currentUser ? (
             <div className="user" onClick={()=>setOpen(!open)}>
-              {/* <img
-                src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              /> */}
               <span>{currentUser?.username}</span>
               {open && <div className="options">
                 {currentUser.isSeller && (
@@ -58,12 +52,6 @@ function Navbar() {
                     </Link>
                   </>
                 )}
-                <Link className="link" to="/orders">
-                  Orders
-                </Link>
-                {/* <Link className="link" to="/messages">
-                  Messages
-                </Link> */}
                 <Link className="link" to="/">
                   Logout
                 </Link>
@@ -98,18 +86,6 @@ function Navbar() {
             <Link className="link menuLink" to="/">
               Digital Marketing
             </Link>
-            {/* <Link className="link menuLink" to="/">
-              Music & Audio
-            </Link>
-            <Link className="link menuLink" to="/">
-              Programming & Tech
-            </Link>
-            <Link className="link menuLink" to="/">
-              Business
-            </Link>
-            <Link className="link menuLink" to="/">
-              Lifestyle
-            </Link> */}
           </div>
           <hr />
         </>
